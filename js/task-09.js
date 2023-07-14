@@ -1,0 +1,17 @@
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+
+const backdrop = document.querySelector(".widget");
+const btnEl = document.querySelector(".change-color");
+const textEl = document.querySelector(".color");
+
+btnEl.addEventListener("click", chaneColor);
+
+function chaneColor(ev) {
+  const chosenColor = getRandomHexColor();
+  backdrop.style.backgroundColor = chosenColor;
+  textEl.textContent = chosenColor
+}
