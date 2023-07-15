@@ -4,7 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const backdrop = document.querySelector(".widget");
+
 const btnEl = document.querySelector(".change-color");
 const textEl = document.querySelector(".color");
 
@@ -12,6 +12,6 @@ btnEl.addEventListener("click", chaneColor);
 
 function chaneColor(ev) {
   const chosenColor = getRandomHexColor();
-  backdrop.style.backgroundColor = chosenColor;
+  document.body.style.backgroundColor = chosenColor;
   textEl.textContent = chosenColor
 }

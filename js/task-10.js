@@ -22,7 +22,6 @@ function createBoxes(amount) {
     width += 10;
     heigth += 10;
     boxSpace.append(box)
-    console.log(box)
   }
 }
 
